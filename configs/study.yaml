@@ -1,12 +1,42 @@
 seed: 20260801
-cache_dir: artifacts
 lens_repository: neuronpedia/jacobian-lens
 models:
-  - {label: GPT-2 124M, id: openai-community/gpt2, revision: main, parameters: 124000000, cache_name: openai-community--gpt2, lens: gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt}
-  - {label: GPT-2 Medium, id: openai-community/gpt2-medium, revision: main, parameters: 355000000}
-  - {label: GPT-2 Large, id: openai-community/gpt2-large, revision: main, parameters: 774000000}
+  - label: Qwen3 1.7B
+    id: Qwen/Qwen3-1.7B
+    revision: main
+    parameters: 1700000000
+    stage: initial
+    lens: qwen3-1.7b/jlens/Salesforce-wikitext/Qwen3-1.7B_jacobian_lens.pt
+  - label: Qwen3 4B
+    id: Qwen/Qwen3-4B
+    revision: main
+    parameters: 4000000000
+    stage: initial
+    lens: qwen3-4b/jlens/Salesforce-wikitext/Qwen3-4B_jacobian_lens.pt
+  - label: Qwen3 8B
+    id: Qwen/Qwen3-8B
+    revision: main
+    parameters: 8000000000
+    stage: initial
+    lens: qwen3-8b/jlens/Salesforce-wikitext/Qwen3-8B_jacobian_lens.pt
+  - label: Qwen3 14B
+    id: Qwen/Qwen3-14B
+    revision: main
+    parameters: 14000000000
+    stage: later
+    lens: qwen3-14b/jlens/Salesforce-wikitext/Qwen3-14B_jacobian_lens.pt
+  - label: Qwen3 32B
+    id: Qwen/Qwen3-32B
+    revision: main
+    parameters: 32000000000
+    stage: later
+    lens: qwen3-32b/jlens/Salesforce-wikitext/Qwen3-32B_jacobian_lens.pt
 benchmark:
-  pairs: data/benchmark.yaml
   bootstraps: 2000
+  max_new_tokens: 6
+  minimum_clean_eligible: 60
+  # Fixed before evaluation; bounds are fractions of transformer depth.
+  relative_windows: [[0.25, 0.45], [0.35, 0.55], [0.45, 0.65], [0.55, 0.75]]
 data:
-  evaluation: data/benchmark.yaml
+  tuning: data/country_tuning.yaml
+  evaluation: data/country_eval.yaml

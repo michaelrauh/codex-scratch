@@ -1,4 +1,160 @@
-- {source: France, target: China, relation: capital, prompt: "The capital of France is", original: Paris, desired: Beijing}
-- {source: Italy, target: Japan, relation: language, prompt: "The main language of Italy is", original: Italian, desired: Japanese}
-- {source: Germany, target: Brazil, relation: continent, prompt: "Germany is in", original: Europe, desired: "South America"}
-
+- trial_id: capital-001
+  relation: capital
+  source_entity: France
+  target_entity: Japan
+  source_prompt: The capital of France is
+  target_prompt: The capital of Japan is
+  source_fact: Paris
+  target_fact: Tokyo
+- trial_id: capital-002
+  relation: capital
+  source_entity: Japan
+  target_entity: Brazil
+  source_prompt: The capital of Japan is
+  target_prompt: The capital of Brazil is
+  source_fact: Tokyo
+  target_fact: Brasilia
+- trial_id: capital-003
+  relation: capital
+  source_entity: Brazil
+  target_entity: Canada
+  source_prompt: The capital of Brazil is
+  target_prompt: The capital of Canada is
+  source_fact: Brasilia
+  target_fact: Ottawa
+- trial_id: capital-004
+  relation: capital
+  source_entity: Canada
+  target_entity: Egypt
+  source_prompt: The capital of Canada is
+  target_prompt: The capital of Egypt is
+  source_fact: Ottawa
+  target_fact: Cairo
+- trial_id: capital-005
+  relation: capital
+  source_entity: Egypt
+  target_entity: India
+  source_prompt: The capital of Egypt is
+  target_prompt: The capital of India is
+  source_fact: Cairo
+  target_fact: New Delhi
+- trial_id: capital-006
+  relation: capital
+  source_entity: India
+  target_entity: Italy
+  source_prompt: The capital of India is
+  target_prompt: The capital of Italy is
+  source_fact: New Delhi
+  target_fact: Rome
+- trial_id: capital-007
+  relation: capital
+  source_entity: Italy
+  target_entity: Kenya
+  source_prompt: The capital of Italy is
+  target_prompt: The capital of Kenya is
+  source_fact: Rome
+  target_fact: Nairobi
+- trial_id: capital-008
+  relation: capital
+  source_entity: Kenya
+  target_entity: Mexico
+  source_prompt: The capital of Kenya is
+  target_prompt: The capital of Mexico is
+  source_fact: Nairobi
+  target_fact: Mexico City
+- trial_id: capital-009
+  relation: capital
+  source_entity: Mexico
+  target_entity: Norway
+  source_prompt: The capital of Mexico is
+  target_prompt: The capital of Norway is
+  source_fact: Mexico City
+  target_fact: Oslo
+- trial_id: capital-010
+  relation: capital
+  source_entity: Norway
+  target_entity: Peru
+  source_prompt: The capital of Norway is
+  target_prompt: The capital of Peru is
+  source_fact: Oslo
+  target_fact: Lima
+- trial_id: capital-011
+  relation: capital
+  source_entity: Peru
+  target_entity: Poland
+  source_prompt: The capital of Peru is
+  target_prompt: The capital of Poland is
+  source_fact: Lima
+  target_fact: Warsaw
+- trial_id: capital-012
+  relation: capital
+  source_entity: Poland
+  target_entity: Portugal
+  source_prompt: The capital of Poland is
+  target_prompt: The capital of Portugal is
+  source_fact: Warsaw
+  target_fact: Lisbon
+- trial_id: capital-013
+  relation: capital
+  source_entity: Portugal
+  target_entity: Spain
+  source_prompt: The capital of Portugal is
+  target_prompt: The capital of Spain is
+  source_fact: Lisbon
+  target_fact: Madrid
+- trial_id: capital-014
+  relation: capital
+  source_entity: Spain
+  target_entity: Sweden
+  source_prompt: The capital of Spain is
+  target_prompt: The capital of Sweden is
+  source_fact: Madrid
+  target_fact: Stockholm
+- trial_id: capital-015
+  relation: capital
+  source_entity: Sweden
+  target_entity: Thailand
+  source_prompt: The capital of Sweden is
+  target_prompt: The capital of Thailand is
+  source_fact: Stockholm
+  target_fact: Bangkok
+- trial_id: capital-016
+  relation: capital
+  source_entity: Thailand
+  target_entity: Turkey
+  source_prompt: The capital of Thailand is
+  target_prompt: The capital of Turkey is
+  source_fact: Bangkok
+  target_fact: Ankara
+- trial_id: capital-017
+  relation: capital
+  source_entity: Turkey
+  target_entity: Ukraine
+  source_prompt: The capital of Turkey is
+  target_prompt: The capital of Ukraine is
+  source_fact: Ankara
+  target_fact: Kyiv
+- trial_id: capital-018
+  relation: capital
+  source_entity: Ukraine
+  target_entity: Vietnam
+  source_prompt: The capital of Ukraine is
+  target_prompt: The capital of Vietnam is
+  source_fact: Kyiv
+  target_fact: Hanoi
+- trial_id: capital-019
+  relation: capital
+  source_entity: Vietnam
+  target_entity: Greece
+  source_prompt: The capital of Vietnam is
+  target_prompt: The capital of Greece is
+  source_fact: Hanoi
+  target_fact: Athens
+- trial_id: capital-020
+  relation: capital
+  source_entity: Greece
+  target_entity: Ireland
+  source_prompt: The capital of Greece is
+  target_prompt: The capital of Ireland is
+  source_fact: Athens
+  target_fact: Dublin
