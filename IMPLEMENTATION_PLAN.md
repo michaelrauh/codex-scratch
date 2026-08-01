@@ -28,8 +28,8 @@ No claim is made until the real runs finish; missing lenses stop execution rathe
 
 ## Environment asset setup
 
-Pre-cache the explicitly configured `openai-community/gpt2` model and GPT-2 lens while the setup
-environment has network access:
+Pre-cache every configured model and any available model-specific lens while the setup environment has
+network access. The manifest records unavailable lenses rather than substituting incompatible ones:
 
 ```bash
 uv sync --extra dev

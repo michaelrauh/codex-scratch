@@ -1,0 +1,75 @@
+{
+  "models": [
+    {
+      "label": "GPT-2 124M",
+      "repo_id": "openai-community/gpt2",
+      "requested_revision": "main",
+      "lens": "gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt",
+      "resolved_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+      "path": "/workspace/codex-scratch/artifacts/models/openai-community--gpt2",
+      "model_status": "cached",
+      "lens_status": "cached"
+    },
+    {
+      "label": "GPT-2 Medium 355M",
+      "repo_id": "openai-community/gpt2-medium",
+      "requested_revision": "main",
+      "lens": null,
+      "resolved_revision": "6dcaa7a952f72f9298047fd5137cd6e4f05f41da",
+      "path": "/workspace/codex-scratch/artifacts/models/openai-community--gpt2-medium",
+      "model_status": "cached",
+      "lens_status": "unavailable"
+    },
+    {
+      "label": "GPT-2 Large 774M",
+      "repo_id": "openai-community/gpt2-large",
+      "requested_revision": "main",
+      "lens": null,
+      "resolved_revision": "32b71b12589c2f8d625668d2335a01cac3249519",
+      "path": "/workspace/codex-scratch/artifacts/models/openai-community--gpt2-large",
+      "model_status": "cached",
+      "lens_status": "unavailable"
+    },
+    {
+      "label": "GPT-2 XL 1.5B",
+      "repo_id": "openai-community/gpt2-xl",
+      "requested_revision": "main",
+      "lens": null,
+      "resolved_revision": "15ea56dee5df4983c59b2538573817e1667135e2",
+      "path": "/workspace/codex-scratch/artifacts/models/openai-community--gpt2-xl",
+      "model_status": "cached",
+      "lens_status": "unavailable"
+    },
+    {
+      "label": "Qwen2.5 0.5B",
+      "repo_id": "Qwen/Qwen2.5-0.5B",
+      "requested_revision": "main",
+      "lens": null,
+      "resolved_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "path": "/workspace/codex-scratch/artifacts/models/Qwen--Qwen2.5-0.5B",
+      "model_status": "cached",
+      "lens_status": "unavailable"
+    },
+    {
+      "label": "Qwen2.5 1.5B",
+      "repo_id": "Qwen/Qwen2.5-1.5B",
+      "requested_revision": "main",
+      "lens": null,
+      "resolved_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "path": "/workspace/codex-scratch/artifacts/models/Qwen--Qwen2.5-1.5B",
+      "model_status": "cached",
+      "lens_status": "unavailable"
+    },
+    {
+      "label": "Qwen2.5 3B",
+      "repo_id": "Qwen/Qwen2.5-3B",
+      "requested_revision": "main",
+      "lens": null,
+      "resolved_revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+      "path": "/workspace/codex-scratch/artifacts/models/Qwen--Qwen2.5-3B",
+      "model_status": "cached",
+      "lens_status": "unavailable"
+    }
+  ],
+  "lens_repository": "neuronpedia/jacobian-lens"
+}

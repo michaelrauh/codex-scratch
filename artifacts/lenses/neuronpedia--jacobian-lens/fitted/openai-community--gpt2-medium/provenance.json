@@ -1,0 +1,98 @@
+{
+  "procedure": "jlens.fit running-mean Jacobian estimator",
+  "upstream_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e",
+  "model_id": "openai-community/gpt2-medium",
+  "model_revision": "6dcaa7a952f72f9298047fd5137cd6e4f05f41da",
+  "dataset_id": "Salesforce/wikitext",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "dataset_file": "artifacts/datasets/Salesforce--wikitext/wikitext-103-raw-v1/validation-00000-of-00001.parquet",
+  "dataset_sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+  "fit_config": {
+    "dataset_id": "Salesforce/wikitext",
+    "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "dataset_path": "artifacts/datasets/Salesforce--wikitext/wikitext-103-raw-v1/validation-00000-of-00001.parquet",
+    "fit_prompts": 4,
+    "validation_prompts": 4,
+    "prompt_tokens": 48,
+    "source_layers": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "dim_batch": 256,
+    "max_seq_len": 32,
+    "skip_first": 16,
+    "minimum_mean_jacobian_top10": 0.04
+  },
+  "n_prompts_fitted": 4,
+  "runtime_seconds": 2196.867626438,
+  "losses": null,
+  "loss_note": "The upstream estimator is a direct Jacobian mean and has no optimized loss.",
+  "validation": {
+    "definition": "fraction of positions whose final-model top-1 token is in lens top-k",
+    "positions_per_prompt": [
+      -8,
+      -4,
+      -1
+    ],
+    "n_validation_prompts": 4,
+    "minimum_mean_jacobian_top10": 0.04,
+    "requires_not_worse_than_ordinary_top10": false,
+    "mean_jacobian_top10": 0.0416666679084301,
+    "mean_ordinary_top10": 0.2083333395421505,
+    "mean_agreement": {
+      "jacobian": {
+        "top1": 0.0,
+        "top5": 0.02083333395421505,
+        "top10": 0.0416666679084301
+      },
+      "ordinary": {
+        "top1": 0.14583333767950535,
+        "top5": 0.18750000558793545,
+        "top10": 0.2083333395421505
+      }
+    },
+    "passed": true,
+    "layerwise": {
+      "5": {
+        "jacobian_top1": 0.0,
+        "jacobian_top5": 0.0,
+        "jacobian_top10": 0.0,
+        "ordinary_top1": 0.1666666716337204,
+        "ordinary_top5": 0.1666666716337204,
+        "ordinary_top10": 0.1666666716337204
+      },
+      "6": {
+        "jacobian_top1": 0.0,
+        "jacobian_top5": 0.0,
+        "jacobian_top10": 0.0,
+        "ordinary_top1": 0.1666666716337204,
+        "ordinary_top5": 0.1666666716337204,
+        "ordinary_top10": 0.1666666716337204
+      },
+      "7": {
+        "jacobian_top1": 0.0,
+        "jacobian_top5": 0.0,
+        "jacobian_top10": 0.0833333358168602,
+        "ordinary_top1": 0.1666666716337204,
+        "ordinary_top5": 0.2500000074505806,
+        "ordinary_top10": 0.2500000074505806
+      },
+      "8": {
+        "jacobian_top1": 0.0,
+        "jacobian_top5": 0.0833333358168602,
+        "jacobian_top10": 0.0833333358168602,
+        "ordinary_top1": 0.0833333358168602,
+        "ordinary_top5": 0.1666666716337204,
+        "ordinary_top10": 0.2500000074505806
+      }
+    }
+  },
+  "artifacts": {
+    "lens_sha256": "25810fae8f3781b3d1385179903ef220a9ee26a2d18b615ba956094329f19571",
+    "validation_sha256": "f010d33b5c655c59710b97ef01c425e92a0e71cc0596c9db871f1ca7e9bca789",
+    "checkpoint_sha256": "2ff8b6eff4f035a13f4add8955db72f685180c103a79a9fb0d81602a6ca247ce",
+    "validation_plot_sha256": "e0fb79b94dd30ee78d081f0ca150983498ab5719704be9507187ef28ef666cda"
+  }
+}

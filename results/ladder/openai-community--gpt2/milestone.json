@@ -1,0 +1,111 @@
+{
+  "status": "measured",
+  "model": {
+    "label": "GPT-2 124M",
+    "id": "openai-community/gpt2",
+    "revision": "main",
+    "cache_name": "openai-community--gpt2",
+    "lens": "gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt",
+    "parameters": 124000000
+  },
+  "lens": {
+    "repository": "neuronpedia/jacobian-lens",
+    "file": "gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt",
+    "n_prompts": 277
+  },
+  "device": "cpu",
+  "runtime_seconds": 1.6262648459999127,
+  "prompt": "The capital of France is",
+  "source": "France",
+  "target": "China",
+  "layers": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "conditions": {
+    "clean": {
+      "answer": " now home to the",
+      "top_token": " now",
+      "selected_probabilities": {
+        "original": 0.001629042555578053,
+        "target": 4.249495759722777e-05
+      },
+      "logits_file": "results/ladder/openai-community--gpt2/clean_logits.pt",
+      "intervention": {}
+    },
+    "semantic": {
+      "answer": " now home to the",
+      "top_token": " now",
+      "selected_probabilities": {
+        "original": 0.0015802145935595036,
+        "target": 2.9587981771328487e-06
+      },
+      "logits_file": "results/ladder/openai-community--gpt2/semantic_logits.pt",
+      "intervention": {
+        "3": {
+          "mean_norm": 4.099855422973633,
+          "removed_energy": 16.80881690979004
+        },
+        "4": {
+          "mean_norm": 4.497221946716309,
+          "removed_energy": 20.225006103515625
+        },
+        "5": {
+          "mean_norm": 4.625894546508789,
+          "removed_energy": 21.398900985717773
+        },
+        "6": {
+          "mean_norm": 5.861770153045654,
+          "removed_energy": 34.360355377197266
+        },
+        "7": {
+          "mean_norm": 5.088159084320068,
+          "removed_energy": 25.889360427856445
+        },
+        "8": {
+          "mean_norm": 0.679530680179596,
+          "removed_energy": 0.4617619216442108
+        }
+      }
+    },
+    "matched_random": {
+      "answer": " now home to the",
+      "top_token": " now",
+      "selected_probabilities": {
+        "original": 0.001438739476725459,
+        "target": 0.0002109456981997937
+      },
+      "logits_file": "results/ladder/openai-community--gpt2/matched_random_logits.pt",
+      "intervention": {
+        "3": {
+          "mean_norm": 4.099855899810791,
+          "removed_energy": 16.80881690979004
+        },
+        "4": {
+          "mean_norm": 2.861142873764038,
+          "removed_energy": 8.186137199401855
+        },
+        "5": {
+          "mean_norm": 2.6404826641082764,
+          "removed_energy": 6.972148895263672
+        },
+        "6": {
+          "mean_norm": 1.2048144340515137,
+          "removed_energy": 1.4515777826309204
+        },
+        "7": {
+          "mean_norm": 0.09732933342456818,
+          "removed_energy": 0.009473000653088093
+        },
+        "8": {
+          "mean_norm": 1.7089931964874268,
+          "removed_energy": 2.9206576347351074
+        }
+      }
+    }
+  }
+}

@@ -26,3 +26,12 @@ def test_missing_cache_fails_without_results(tmp_path: Path) -> None:
     with pytest.raises(FileNotFoundError, match="scripts/cache_assets.py"):
         run_milestone(config, output, max_new_tokens=1)
     assert not output.exists()
+
+
+def test_model_is_selected_from_configuration(tmp_path: Path) -> None:
+    config = yaml.safe_load(Path("configs/study.yaml").read_text())
+    with pytest.raises(FileNotFoundError, match="no real Jacobian lens"):
+        run_milestone(config, tmp_path, model_id="openai-community/gpt2-large")
+    with pytest.raises(ValueError, match="model is not configured"):
+        run_milestone(config, tmp_path, model_id="not/a-model")
+    assert not any(tmp_path.iterdir())

@@ -27,7 +27,7 @@ class SwapHooks(AbstractContextManager["SwapHooks"]):
         self.blocks, self.directions, self.kind, self.strength = blocks, directions, kind, strength
         self.generator = torch.Generator().manual_seed(seed)
         self.handles: list[torch.utils.hooks.RemovableHandle] = []
-        self.measurements: dict[int, dict[str, float]] = {}
+        self.measurements: dict[int, list[dict[str, object]]] = {}
 
     def _hook(self, layer: int):
         directions = self.directions[layer]
@@ -41,10 +41,17 @@ class SwapHooks(AbstractContextManager["SwapHooks"]):
                 if self.kind == "semantic"
                 else matched_random_delta(semantic_delta, self.generator)
             )
-            self.measurements[layer] = {
-                "mean_norm": float(delta.norm(dim=-1).mean()),
-                "removed_energy": float(delta.square().sum(dim=-1).mean()),
-            }
+            semantic_energy = semantic_delta.square().sum(dim=-1)
+            applied_energy = delta.square().sum(dim=-1)
+            self.measurements.setdefault(layer, []).append(
+                {
+                    "shape": list(delta.shape[:-1]),
+                    "semantic_energy": semantic_energy.detach().cpu().flatten().tolist(),
+                    "applied_energy": applied_energy.detach().cpu().flatten().tolist(),
+                    "mean_norm": float(delta.norm(dim=-1).mean()),
+                    "removed_energy": float(applied_energy.mean()),
+                }
+            )
             changed = (h + delta).to(tensor.dtype)
             return changed if torch.is_tensor(output) else (changed, *output[1:])  # type: ignore[index]
 
