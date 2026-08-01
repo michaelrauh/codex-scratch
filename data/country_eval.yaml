@@ -1,0 +1,4 @@
+- {source: China, target: France, relation: currency, prompt: "The currency of China is", original: yuan, desired: euro}
+- {source: Japan, target: Italy, relation: capital, prompt: "The capital of Japan is", original: Tokyo, desired: Rome}
+- {source: Brazil, target: Germany, relation: language, prompt: "The main language of Brazil is", original: Portuguese, desired: German}
+

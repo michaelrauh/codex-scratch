@@ -1,0 +1,9 @@
+jacobian_lens:
+  url: https://github.com/anthropics/jacobian-lens
+  commit: 581d398613e5602a5af361e1c34d3a92ea82ba8e
+  reuse: Installed at the pinned revision; HF adapter, JacobianLens loading, fitting, and token directions.
+jspace_replication:
+  url: https://github.com/tao-hpu/jspace-replication
+  commit: e03ee9711e2b8b7116f173aff32de38a3a463c51
+  reuse: Direction construction and residual-hook conventions informed the intervention wrapper.
+
