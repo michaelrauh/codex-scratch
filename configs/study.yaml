@@ -36,3 +36,6 @@ lens_fit:
   max_seq_len: 32
   skip_first: 16
   minimum_mean_jacobian_top10: 0.20
+specificity:
+  selected_layers: [8, 9, 10]
+  evaluation_pairs: 60

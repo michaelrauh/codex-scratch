@@ -4,6 +4,18 @@
 capability pilot has not completed.** Missing-lens cases remain setup failures, not model experiments.
 No cross-model capability conclusion is made.
 
+## Semantic-specificity result (2026-08-01)
+
+The positive one-step effect is target-token-specific but did not distinguish capital answers from
+clean-probability-matched alphabetic non-capital targets. On the frozen 60 held-out pairs and layers
+8--10, capital-target gain was 7.409757 and matched non-capital-target gain was 7.253299. The paired
+difference was 0.156458 (95% prompt-bootstrap CI [-0.226416, 0.567615], p=0.445959). Under the semantic
+intervention, the nominated capital nevertheless beat the matched off-target by 10.296925 (CI
+[8.874132, 11.750713], p=2.98e-20). The maximum relative energy mismatch was 2.07e-7 and mean absolute
+clean log-probability mismatch was 0.007851. The numerical conclusion is therefore not that the prior
+effect is capital-semantic-specific, but that this J-space operation can selectively write nominated
+tokens, including non-capital controls. Full protocol and limitations are in `SPECIFICITY_REPORT.md`.
+
 ## Positive teacher-forced causal validation (2026-08-01)
 
 The corrected experiment uses one teacher-forced next-token step. For every prompt it caches the clean

@@ -1,0 +1,32 @@
+{
+  "n_evaluation_pairs": 60,
+  "semantic_target_log_probability_delta_mean": 7.409756807486216,
+  "probability_matched_control_target_delta_mean": 7.253299196561177,
+  "semantic_minus_control_nominated_gain_mean": 0.15645761092503865,
+  "semantic_minus_control_nominated_gain_ci95": [
+    -0.226415673494339,
+    0.5676150311032931
+  ],
+  "semantic_minus_control_nominated_gain_paired_ttest_p": 0.4459587774750604,
+  "semantic_target_minus_off_target_gain_mean": 10.296925485134125,
+  "semantic_target_minus_off_target_gain_ci95": [
+    8.874132314622402,
+    11.7507125617067
+  ],
+  "semantic_target_minus_off_target_gain_paired_ttest_p": 2.9848163201297594e-20,
+  "semantic_control_off_target_delta_mean": -2.8871686776479084,
+  "mean_absolute_clean_log_probability_mismatch": 0.007851409912109374,
+  "maximum_relative_energy_mismatch": 2.0678343210481825e-07,
+  "model": "openai-community/gpt2",
+  "model_resolved_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "lens_repository_resolved_revision": "a4114d7752d11eb546e6cf372213d7e75526d3a1",
+  "selected_layers_frozen_from_one_step": [
+    8,
+    9,
+    10
+  ],
+  "control": "nearest-clean-log-probability alphabetic non-capital token; per-layer energy matched",
+  "n_screened_pairs": 210,
+  "n_eligible_pairs": 210,
+  "runtime_seconds": 43.61096680999981
+}
