@@ -1,9 +1,640 @@
-- {source: China, target: France, relation: currency, prompt: "The currency of China is", original: yuan, desired: euro}
-- {source: Japan, target: Italy, relation: capital, prompt: "The capital of Japan is", original: Tokyo, desired: Rome}
-- {source: Brazil, target: Germany, relation: language, prompt: "The main language of Brazil is", original: Portuguese, desired: German}
-- {source: France, target: China, relation: capital, prompt: "Q: What is the capital of France?\nA:", original: Paris, desired: Beijing}
-- {source: Japan, target: Italy, relation: capital, prompt: "Q: What is the capital of Japan?\nA:", original: Tokyo, desired: Rome}
-- {source: Germany, target: Brazil, relation: capital, prompt: "Q: What is the capital of Germany?\nA:", original: Berlin, desired: Brasilia}
-- {source: Italy, target: France, relation: capital, prompt: "Italy's capital city is", original: Rome, desired: Paris}
-- {source: China, target: Japan, relation: capital, prompt: "China's capital city is", original: Beijing, desired: Tokyo}
-- {source: France, target: Germany, relation: capital, prompt: "France has its capital in", original: Paris, desired: Berlin}
+- trial_id: capital-001
+  relation: capital
+  source_entity: Albania
+  target_entity: Algeria
+  source_prompt: The capital of Albania is
+  target_prompt: The capital of Algeria is
+  source_fact: Tirana
+  target_fact: Algiers
+- trial_id: capital-002
+  relation: capital
+  source_entity: Algeria
+  target_entity: Angola
+  source_prompt: The capital of Algeria is
+  target_prompt: The capital of Angola is
+  source_fact: Algiers
+  target_fact: Luanda
+- trial_id: capital-003
+  relation: capital
+  source_entity: Angola
+  target_entity: Argentina
+  source_prompt: The capital of Angola is
+  target_prompt: The capital of Argentina is
+  source_fact: Luanda
+  target_fact: Buenos Aires
+- trial_id: capital-004
+  relation: capital
+  source_entity: Argentina
+  target_entity: Armenia
+  source_prompt: The capital of Argentina is
+  target_prompt: The capital of Armenia is
+  source_fact: Buenos Aires
+  target_fact: Yerevan
+- trial_id: capital-005
+  relation: capital
+  source_entity: Armenia
+  target_entity: Australia
+  source_prompt: The capital of Armenia is
+  target_prompt: The capital of Australia is
+  source_fact: Yerevan
+  target_fact: Canberra
+- trial_id: capital-006
+  relation: capital
+  source_entity: Australia
+  target_entity: Austria
+  source_prompt: The capital of Australia is
+  target_prompt: The capital of Austria is
+  source_fact: Canberra
+  target_fact: Vienna
+- trial_id: capital-007
+  relation: capital
+  source_entity: Austria
+  target_entity: Azerbaijan
+  source_prompt: The capital of Austria is
+  target_prompt: The capital of Azerbaijan is
+  source_fact: Vienna
+  target_fact: Baku
+- trial_id: capital-008
+  relation: capital
+  source_entity: Azerbaijan
+  target_entity: Bahrain
+  source_prompt: The capital of Azerbaijan is
+  target_prompt: The capital of Bahrain is
+  source_fact: Baku
+  target_fact: Manama
+- trial_id: capital-009
+  relation: capital
+  source_entity: Bahrain
+  target_entity: Bangladesh
+  source_prompt: The capital of Bahrain is
+  target_prompt: The capital of Bangladesh is
+  source_fact: Manama
+  target_fact: Dhaka
+- trial_id: capital-010
+  relation: capital
+  source_entity: Bangladesh
+  target_entity: Belarus
+  source_prompt: The capital of Bangladesh is
+  target_prompt: The capital of Belarus is
+  source_fact: Dhaka
+  target_fact: Minsk
+- trial_id: capital-011
+  relation: capital
+  source_entity: Belarus
+  target_entity: Belgium
+  source_prompt: The capital of Belarus is
+  target_prompt: The capital of Belgium is
+  source_fact: Minsk
+  target_fact: Brussels
+- trial_id: capital-012
+  relation: capital
+  source_entity: Belgium
+  target_entity: Bhutan
+  source_prompt: The capital of Belgium is
+  target_prompt: The capital of Bhutan is
+  source_fact: Brussels
+  target_fact: Thimphu
+- trial_id: capital-013
+  relation: capital
+  source_entity: Bhutan
+  target_entity: Bulgaria
+  source_prompt: The capital of Bhutan is
+  target_prompt: The capital of Bulgaria is
+  source_fact: Thimphu
+  target_fact: Sofia
+- trial_id: capital-014
+  relation: capital
+  source_entity: Bulgaria
+  target_entity: Cambodia
+  source_prompt: The capital of Bulgaria is
+  target_prompt: The capital of Cambodia is
+  source_fact: Sofia
+  target_fact: Phnom Penh
+- trial_id: capital-015
+  relation: capital
+  source_entity: Cambodia
+  target_entity: Chile
+  source_prompt: The capital of Cambodia is
+  target_prompt: The capital of Chile is
+  source_fact: Phnom Penh
+  target_fact: Santiago
+- trial_id: capital-016
+  relation: capital
+  source_entity: Chile
+  target_entity: China
+  source_prompt: The capital of Chile is
+  target_prompt: The capital of China is
+  source_fact: Santiago
+  target_fact: Beijing
+- trial_id: capital-017
+  relation: capital
+  source_entity: China
+  target_entity: Colombia
+  source_prompt: The capital of China is
+  target_prompt: The capital of Colombia is
+  source_fact: Beijing
+  target_fact: Bogota
+- trial_id: capital-018
+  relation: capital
+  source_entity: Colombia
+  target_entity: Croatia
+  source_prompt: The capital of Colombia is
+  target_prompt: The capital of Croatia is
+  source_fact: Bogota
+  target_fact: Zagreb
+- trial_id: capital-019
+  relation: capital
+  source_entity: Croatia
+  target_entity: Cuba
+  source_prompt: The capital of Croatia is
+  target_prompt: The capital of Cuba is
+  source_fact: Zagreb
+  target_fact: Havana
+- trial_id: capital-020
+  relation: capital
+  source_entity: Cuba
+  target_entity: Cyprus
+  source_prompt: The capital of Cuba is
+  target_prompt: The capital of Cyprus is
+  source_fact: Havana
+  target_fact: Nicosia
+- trial_id: capital-021
+  relation: capital
+  source_entity: Cyprus
+  target_entity: Denmark
+  source_prompt: The capital of Cyprus is
+  target_prompt: The capital of Denmark is
+  source_fact: Nicosia
+  target_fact: Copenhagen
+- trial_id: capital-022
+  relation: capital
+  source_entity: Denmark
+  target_entity: Ecuador
+  source_prompt: The capital of Denmark is
+  target_prompt: The capital of Ecuador is
+  source_fact: Copenhagen
+  target_fact: Quito
+- trial_id: capital-023
+  relation: capital
+  source_entity: Ecuador
+  target_entity: Estonia
+  source_prompt: The capital of Ecuador is
+  target_prompt: The capital of Estonia is
+  source_fact: Quito
+  target_fact: Tallinn
+- trial_id: capital-024
+  relation: capital
+  source_entity: Estonia
+  target_entity: Ethiopia
+  source_prompt: The capital of Estonia is
+  target_prompt: The capital of Ethiopia is
+  source_fact: Tallinn
+  target_fact: Addis Ababa
+- trial_id: capital-025
+  relation: capital
+  source_entity: Ethiopia
+  target_entity: Finland
+  source_prompt: The capital of Ethiopia is
+  target_prompt: The capital of Finland is
+  source_fact: Addis Ababa
+  target_fact: Helsinki
+- trial_id: capital-026
+  relation: capital
+  source_entity: Finland
+  target_entity: Georgia
+  source_prompt: The capital of Finland is
+  target_prompt: The capital of Georgia is
+  source_fact: Helsinki
+  target_fact: Tbilisi
+- trial_id: capital-027
+  relation: capital
+  source_entity: Georgia
+  target_entity: Germany
+  source_prompt: The capital of Georgia is
+  target_prompt: The capital of Germany is
+  source_fact: Tbilisi
+  target_fact: Berlin
+- trial_id: capital-028
+  relation: capital
+  source_entity: Germany
+  target_entity: Ghana
+  source_prompt: The capital of Germany is
+  target_prompt: The capital of Ghana is
+  source_fact: Berlin
+  target_fact: Accra
+- trial_id: capital-029
+  relation: capital
+  source_entity: Ghana
+  target_entity: Hungary
+  source_prompt: The capital of Ghana is
+  target_prompt: The capital of Hungary is
+  source_fact: Accra
+  target_fact: Budapest
+- trial_id: capital-030
+  relation: capital
+  source_entity: Hungary
+  target_entity: Iceland
+  source_prompt: The capital of Hungary is
+  target_prompt: The capital of Iceland is
+  source_fact: Budapest
+  target_fact: Reykjavik
+- trial_id: capital-031
+  relation: capital
+  source_entity: Iceland
+  target_entity: Indonesia
+  source_prompt: The capital of Iceland is
+  target_prompt: The capital of Indonesia is
+  source_fact: Reykjavik
+  target_fact: Jakarta
+- trial_id: capital-032
+  relation: capital
+  source_entity: Indonesia
+  target_entity: Iran
+  source_prompt: The capital of Indonesia is
+  target_prompt: The capital of Iran is
+  source_fact: Jakarta
+  target_fact: Tehran
+- trial_id: capital-033
+  relation: capital
+  source_entity: Iran
+  target_entity: Iraq
+  source_prompt: The capital of Iran is
+  target_prompt: The capital of Iraq is
+  source_fact: Tehran
+  target_fact: Baghdad
+- trial_id: capital-034
+  relation: capital
+  source_entity: Iraq
+  target_entity: Israel
+  source_prompt: The capital of Iraq is
+  target_prompt: The capital of Israel is
+  source_fact: Baghdad
+  target_fact: Jerusalem
+- trial_id: capital-035
+  relation: capital
+  source_entity: Israel
+  target_entity: Jamaica
+  source_prompt: The capital of Israel is
+  target_prompt: The capital of Jamaica is
+  source_fact: Jerusalem
+  target_fact: Kingston
+- trial_id: capital-036
+  relation: capital
+  source_entity: Jamaica
+  target_entity: Jordan
+  source_prompt: The capital of Jamaica is
+  target_prompt: The capital of Jordan is
+  source_fact: Kingston
+  target_fact: Amman
+- trial_id: capital-037
+  relation: capital
+  source_entity: Jordan
+  target_entity: Kazakhstan
+  source_prompt: The capital of Jordan is
+  target_prompt: The capital of Kazakhstan is
+  source_fact: Amman
+  target_fact: Astana
+- trial_id: capital-038
+  relation: capital
+  source_entity: Kazakhstan
+  target_entity: Kuwait
+  source_prompt: The capital of Kazakhstan is
+  target_prompt: The capital of Kuwait is
+  source_fact: Astana
+  target_fact: Kuwait City
+- trial_id: capital-039
+  relation: capital
+  source_entity: Kuwait
+  target_entity: Latvia
+  source_prompt: The capital of Kuwait is
+  target_prompt: The capital of Latvia is
+  source_fact: Kuwait City
+  target_fact: Riga
+- trial_id: capital-040
+  relation: capital
+  source_entity: Latvia
+  target_entity: Lebanon
+  source_prompt: The capital of Latvia is
+  target_prompt: The capital of Lebanon is
+  source_fact: Riga
+  target_fact: Beirut
+- trial_id: capital-041
+  relation: capital
+  source_entity: Lebanon
+  target_entity: Libya
+  source_prompt: The capital of Lebanon is
+  target_prompt: The capital of Libya is
+  source_fact: Beirut
+  target_fact: Tripoli
+- trial_id: capital-042
+  relation: capital
+  source_entity: Libya
+  target_entity: Lithuania
+  source_prompt: The capital of Libya is
+  target_prompt: The capital of Lithuania is
+  source_fact: Tripoli
+  target_fact: Vilnius
+- trial_id: capital-043
+  relation: capital
+  source_entity: Lithuania
+  target_entity: Luxembourg
+  source_prompt: The capital of Lithuania is
+  target_prompt: The capital of Luxembourg is
+  source_fact: Vilnius
+  target_fact: Luxembourg
+- trial_id: capital-044
+  relation: capital
+  source_entity: Luxembourg
+  target_entity: Malaysia
+  source_prompt: The capital of Luxembourg is
+  target_prompt: The capital of Malaysia is
+  source_fact: Luxembourg
+  target_fact: Kuala Lumpur
+- trial_id: capital-045
+  relation: capital
+  source_entity: Malaysia
+  target_entity: Mongolia
+  source_prompt: The capital of Malaysia is
+  target_prompt: The capital of Mongolia is
+  source_fact: Kuala Lumpur
+  target_fact: Ulaanbaatar
+- trial_id: capital-046
+  relation: capital
+  source_entity: Mongolia
+  target_entity: Morocco
+  source_prompt: The capital of Mongolia is
+  target_prompt: The capital of Morocco is
+  source_fact: Ulaanbaatar
+  target_fact: Rabat
+- trial_id: capital-047
+  relation: capital
+  source_entity: Morocco
+  target_entity: Myanmar
+  source_prompt: The capital of Morocco is
+  target_prompt: The capital of Myanmar is
+  source_fact: Rabat
+  target_fact: Naypyidaw
+- trial_id: capital-048
+  relation: capital
+  source_entity: Myanmar
+  target_entity: Nepal
+  source_prompt: The capital of Myanmar is
+  target_prompt: The capital of Nepal is
+  source_fact: Naypyidaw
+  target_fact: Kathmandu
+- trial_id: capital-049
+  relation: capital
+  source_entity: Nepal
+  target_entity: Netherlands
+  source_prompt: The capital of Nepal is
+  target_prompt: The capital of Netherlands is
+  source_fact: Kathmandu
+  target_fact: Amsterdam
+- trial_id: capital-050
+  relation: capital
+  source_entity: Netherlands
+  target_entity: New Zealand
+  source_prompt: The capital of Netherlands is
+  target_prompt: The capital of New Zealand is
+  source_fact: Amsterdam
+  target_fact: Wellington
+- trial_id: capital-051
+  relation: capital
+  source_entity: New Zealand
+  target_entity: Nigeria
+  source_prompt: The capital of New Zealand is
+  target_prompt: The capital of Nigeria is
+  source_fact: Wellington
+  target_fact: Abuja
+- trial_id: capital-052
+  relation: capital
+  source_entity: Nigeria
+  target_entity: North Korea
+  source_prompt: The capital of Nigeria is
+  target_prompt: The capital of North Korea is
+  source_fact: Abuja
+  target_fact: Pyongyang
+- trial_id: capital-053
+  relation: capital
+  source_entity: North Korea
+  target_entity: Oman
+  source_prompt: The capital of North Korea is
+  target_prompt: The capital of Oman is
+  source_fact: Pyongyang
+  target_fact: Muscat
+- trial_id: capital-054
+  relation: capital
+  source_entity: Oman
+  target_entity: Pakistan
+  source_prompt: The capital of Oman is
+  target_prompt: The capital of Pakistan is
+  source_fact: Muscat
+  target_fact: Islamabad
+- trial_id: capital-055
+  relation: capital
+  source_entity: Pakistan
+  target_entity: Panama
+  source_prompt: The capital of Pakistan is
+  target_prompt: The capital of Panama is
+  source_fact: Islamabad
+  target_fact: Panama City
+- trial_id: capital-056
+  relation: capital
+  source_entity: Panama
+  target_entity: Paraguay
+  source_prompt: The capital of Panama is
+  target_prompt: The capital of Paraguay is
+  source_fact: Panama City
+  target_fact: Asuncion
+- trial_id: capital-057
+  relation: capital
+  source_entity: Paraguay
+  target_entity: Philippines
+  source_prompt: The capital of Paraguay is
+  target_prompt: The capital of Philippines is
+  source_fact: Asuncion
+  target_fact: Manila
+- trial_id: capital-058
+  relation: capital
+  source_entity: Philippines
+  target_entity: Qatar
+  source_prompt: The capital of Philippines is
+  target_prompt: The capital of Qatar is
+  source_fact: Manila
+  target_fact: Doha
+- trial_id: capital-059
+  relation: capital
+  source_entity: Qatar
+  target_entity: Romania
+  source_prompt: The capital of Qatar is
+  target_prompt: The capital of Romania is
+  source_fact: Doha
+  target_fact: Bucharest
+- trial_id: capital-060
+  relation: capital
+  source_entity: Romania
+  target_entity: Russia
+  source_prompt: The capital of Romania is
+  target_prompt: The capital of Russia is
+  source_fact: Bucharest
+  target_fact: Moscow
+- trial_id: capital-061
+  relation: capital
+  source_entity: Russia
+  target_entity: Saudi Arabia
+  source_prompt: The capital of Russia is
+  target_prompt: The capital of Saudi Arabia is
+  source_fact: Moscow
+  target_fact: Riyadh
+- trial_id: capital-062
+  relation: capital
+  source_entity: Saudi Arabia
+  target_entity: Senegal
+  source_prompt: The capital of Saudi Arabia is
+  target_prompt: The capital of Senegal is
+  source_fact: Riyadh
+  target_fact: Dakar
+- trial_id: capital-063
+  relation: capital
+  source_entity: Senegal
+  target_entity: Serbia
+  source_prompt: The capital of Senegal is
+  target_prompt: The capital of Serbia is
+  source_fact: Dakar
+  target_fact: Belgrade
+- trial_id: capital-064
+  relation: capital
+  source_entity: Serbia
+  target_entity: Singapore
+  source_prompt: The capital of Serbia is
+  target_prompt: The capital of Singapore is
+  source_fact: Belgrade
+  target_fact: Singapore
+- trial_id: capital-065
+  relation: capital
+  source_entity: Singapore
+  target_entity: Slovakia
+  source_prompt: The capital of Singapore is
+  target_prompt: The capital of Slovakia is
+  source_fact: Singapore
+  target_fact: Bratislava
+- trial_id: capital-066
+  relation: capital
+  source_entity: Slovakia
+  target_entity: Slovenia
+  source_prompt: The capital of Slovakia is
+  target_prompt: The capital of Slovenia is
+  source_fact: Bratislava
+  target_fact: Ljubljana
+- trial_id: capital-067
+  relation: capital
+  source_entity: Slovenia
+  target_entity: South Korea
+  source_prompt: The capital of Slovenia is
+  target_prompt: The capital of South Korea is
+  source_fact: Ljubljana
+  target_fact: Seoul
+- trial_id: capital-068
+  relation: capital
+  source_entity: South Korea
+  target_entity: Switzerland
+  source_prompt: The capital of South Korea is
+  target_prompt: The capital of Switzerland is
+  source_fact: Seoul
+  target_fact: Bern
+- trial_id: capital-069
+  relation: capital
+  source_entity: Switzerland
+  target_entity: Syria
+  source_prompt: The capital of Switzerland is
+  target_prompt: The capital of Syria is
+  source_fact: Bern
+  target_fact: Damascus
+- trial_id: capital-070
+  relation: capital
+  source_entity: Syria
+  target_entity: Taiwan
+  source_prompt: The capital of Syria is
+  target_prompt: The capital of Taiwan is
+  source_fact: Damascus
+  target_fact: Taipei
+- trial_id: capital-071
+  relation: capital
+  source_entity: Taiwan
+  target_entity: Tanzania
+  source_prompt: The capital of Taiwan is
+  target_prompt: The capital of Tanzania is
+  source_fact: Taipei
+  target_fact: Dodoma
+- trial_id: capital-072
+  relation: capital
+  source_entity: Tanzania
+  target_entity: Tunisia
+  source_prompt: The capital of Tanzania is
+  target_prompt: The capital of Tunisia is
+  source_fact: Dodoma
+  target_fact: Tunis
+- trial_id: capital-073
+  relation: capital
+  source_entity: Tunisia
+  target_entity: Uganda
+  source_prompt: The capital of Tunisia is
+  target_prompt: The capital of Uganda is
+  source_fact: Tunis
+  target_fact: Kampala
+- trial_id: capital-074
+  relation: capital
+  source_entity: Uganda
+  target_entity: United Arab Emirates
+  source_prompt: The capital of Uganda is
+  target_prompt: The capital of United Arab Emirates is
+  source_fact: Kampala
+  target_fact: Abu Dhabi
+- trial_id: capital-075
+  relation: capital
+  source_entity: United Arab Emirates
+  target_entity: United Kingdom
+  source_prompt: The capital of United Arab Emirates is
+  target_prompt: The capital of United Kingdom is
+  source_fact: Abu Dhabi
+  target_fact: London
+- trial_id: capital-076
+  relation: capital
+  source_entity: United Kingdom
+  target_entity: United States
+  source_prompt: The capital of United Kingdom is
+  target_prompt: The capital of United States is
+  source_fact: London
+  target_fact: Washington, D.C.
+- trial_id: capital-077
+  relation: capital
+  source_entity: United States
+  target_entity: Uruguay
+  source_prompt: The capital of United States is
+  target_prompt: The capital of Uruguay is
+  source_fact: Washington, D.C.
+  target_fact: Montevideo
+- trial_id: capital-078
+  relation: capital
+  source_entity: Uruguay
+  target_entity: Uzbekistan
+  source_prompt: The capital of Uruguay is
+  target_prompt: The capital of Uzbekistan is
+  source_fact: Montevideo
+  target_fact: Tashkent
+- trial_id: capital-079
+  relation: capital
+  source_entity: Uzbekistan
+  target_entity: Venezuela
+  source_prompt: The capital of Uzbekistan is
+  target_prompt: The capital of Venezuela is
+  source_fact: Tashkent
+  target_fact: Caracas
+- trial_id: capital-080
+  relation: capital
+  source_entity: Venezuela
+  target_entity: Zambia
+  source_prompt: The capital of Venezuela is
+  target_prompt: The capital of Zambia is
+  source_fact: Caracas
+  target_fact: Lusaka

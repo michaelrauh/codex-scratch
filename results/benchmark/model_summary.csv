@@ -1,4 +1,0 @@
-model,parameters,trials,clean_accuracy_pct,swap_success_pct,swap_success_ci_low,swap_success_ci_high,source_retention_pct,other_wrong_pct
-GPT-2 124M,124000000,12,50.0,0.0,0.0,0.0,50.0,50.0
-GPT-2 Medium,355000000,12,50.0,0.0,0.0,0.0,50.0,50.0
-GPT-2 Large,774000000,12,50.0,0.0,0.0,0.0,50.0,50.0
