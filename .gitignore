@@ -4,8 +4,15 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 artifacts/
-results/*.parquet
-results/milestone/
-charts/*.png
-charts/*.svg
+# Generated binary/model artifacts are local handoff outputs, never PR payloads.
+*.png
+*.parquet
+*.pt
+*.bin
+*.safetensors
+*.npy
+*.npz
 
+# Complete trial/logit dumps can be regenerated from the retained summaries.
+results/**/one_step_raw.csv
+results/**/*_logits.*

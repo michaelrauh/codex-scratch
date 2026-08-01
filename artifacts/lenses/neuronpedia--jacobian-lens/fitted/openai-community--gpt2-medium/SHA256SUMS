@@ -1,0 +1,5 @@
+2ff8b6eff4f035a13f4add8955db72f685180c103a79a9fb0d81602a6ca247ce  artifacts/lenses/neuronpedia--jacobian-lens/fitted/openai-community--gpt2-medium/fit.checkpoint.pt
+25810fae8f3781b3d1385179903ef220a9ee26a2d18b615ba956094329f19571  artifacts/lenses/neuronpedia--jacobian-lens/fitted/openai-community--gpt2-medium/jacobian_lens.pt
+e0fb79b94dd30ee78d081f0ca150983498ab5719704be9507187ef28ef666cda  artifacts/lenses/neuronpedia--jacobian-lens/fitted/openai-community--gpt2-medium/layerwise_validation.png
+c659cadd5f3e19c0985ba0858375adfe58a8e7faa1af9e278f4dabd6a6e58b6c  artifacts/lenses/neuronpedia--jacobian-lens/fitted/openai-community--gpt2-medium/provenance.json
+f010d33b5c655c59710b97ef01c425e92a0e71cc0596c9db871f1ca7e9bca789  artifacts/lenses/neuronpedia--jacobian-lens/fitted/openai-community--gpt2-medium/validation.json

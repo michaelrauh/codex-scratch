@@ -1,0 +1,8 @@
+model,model_id,parameter_count,semantic_probability_change,matched_random_probability_change,effect_size,success,error,runtime_seconds
+GPT-2 124M,openai-community/gpt2,124000000,-3.953615942009492e-05,0.00016845074060256593,-0.00020798690002266085,True,,8.17876969100007
+GPT-2 Medium 355M,openai-community/gpt2-medium,355000000,,,,False,FileNotFoundError: no real Jacobian lens is configured for openai-community/gpt2-medium; fit and configure one first,0.00019127500013382814
+GPT-2 Large 774M,openai-community/gpt2-large,774000000,,,,False,FileNotFoundError: no real Jacobian lens is configured for openai-community/gpt2-large; fit and configure one first,2.1112000013090437e-05
+GPT-2 XL 1.5B,openai-community/gpt2-xl,1500000000,,,,False,FileNotFoundError: no real Jacobian lens is configured for openai-community/gpt2-xl; fit and configure one first,1.578799992785207e-05
+Qwen2.5 0.5B,Qwen/Qwen2.5-0.5B,500000000,,,,False,FileNotFoundError: no real Jacobian lens is configured for Qwen/Qwen2.5-0.5B; fit and configure one first,1.397300002281554e-05
+Qwen2.5 1.5B,Qwen/Qwen2.5-1.5B,1500000000,,,,False,FileNotFoundError: no real Jacobian lens is configured for Qwen/Qwen2.5-1.5B; fit and configure one first,1.226000017595652e-05
+Qwen2.5 3B,Qwen/Qwen2.5-3B,3000000000,,,,False,FileNotFoundError: no real Jacobian lens is configured for Qwen/Qwen2.5-3B; fit and configure one first,1.233699981639802e-05

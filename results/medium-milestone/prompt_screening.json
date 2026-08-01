@@ -1,0 +1,125 @@
+{
+  "included": [
+    {
+      "prompt_index": 1,
+      "source": "Japan",
+      "target": "Italy",
+      "relation": "capital",
+      "prompt": "The capital of Japan is",
+      "original": "Tokyo",
+      "desired": "Rome",
+      "clean_answer_rank": 1,
+      "clean_answer_probability": 0.07079062610864639,
+      "original_token": 11790,
+      "desired_token": 10598
+    },
+    {
+      "prompt_index": 2,
+      "source": "Brazil",
+      "target": "Germany",
+      "relation": "language",
+      "prompt": "The main language of Brazil is",
+      "original": "Portuguese",
+      "desired": "German",
+      "clean_answer_rank": 1,
+      "clean_answer_probability": 0.5853398442268372,
+      "original_token": 21813,
+      "desired_token": 2679
+    },
+    {
+      "prompt_index": 3,
+      "source": "France",
+      "target": "China",
+      "relation": "capital",
+      "prompt": "Q: What is the capital of France?\nA:",
+      "original": "Paris",
+      "desired": "Beijing",
+      "clean_answer_rank": 1,
+      "clean_answer_probability": 0.25082266330718994,
+      "original_token": 6342,
+      "desired_token": 11618
+    },
+    {
+      "prompt_index": 4,
+      "source": "Japan",
+      "target": "Italy",
+      "relation": "capital",
+      "prompt": "Q: What is the capital of Japan?\nA:",
+      "original": "Tokyo",
+      "desired": "Rome",
+      "clean_answer_rank": 1,
+      "clean_answer_probability": 0.21123149991035461,
+      "original_token": 11790,
+      "desired_token": 10598
+    },
+    {
+      "prompt_index": 8,
+      "source": "France",
+      "target": "Germany",
+      "relation": "capital",
+      "prompt": "France has its capital in",
+      "original": "Paris",
+      "desired": "Berlin",
+      "clean_answer_rank": 1,
+      "clean_answer_probability": 0.35576331615448,
+      "original_token": 6342,
+      "desired_token": 11307
+    }
+  ],
+  "excluded": [
+    {
+      "prompt_index": 0,
+      "source": "China",
+      "target": "France",
+      "relation": "currency",
+      "prompt": "The currency of China is",
+      "original": "yuan",
+      "desired": "euro",
+      "clean_answer_rank": 188,
+      "clean_answer_probability": 0.0007307161577045918,
+      "exclusion_reasons": [
+        "clean_answer_rank=188>top_k=20"
+      ]
+    },
+    {
+      "prompt_index": 5,
+      "source": "Germany",
+      "target": "Brazil",
+      "relation": "capital",
+      "prompt": "Q: What is the capital of Germany?\nA:",
+      "original": "Berlin",
+      "desired": "Brasilia",
+      "exclusion_reasons": [
+        "target_answer_token_count=2"
+      ]
+    },
+    {
+      "prompt_index": 6,
+      "source": "Italy",
+      "target": "France",
+      "relation": "capital",
+      "prompt": "Italy's capital city is",
+      "original": "Rome",
+      "desired": "Paris",
+      "clean_answer_rank": 348,
+      "clean_answer_probability": 0.00034575999598018825,
+      "exclusion_reasons": [
+        "clean_answer_rank=348>top_k=20"
+      ]
+    },
+    {
+      "prompt_index": 7,
+      "source": "China",
+      "target": "Japan",
+      "relation": "capital",
+      "prompt": "China's capital city is",
+      "original": "Beijing",
+      "desired": "Tokyo",
+      "clean_answer_rank": 581,
+      "clean_answer_probability": 0.00016964977839961648,
+      "exclusion_reasons": [
+        "clean_answer_rank=581>top_k=20"
+      ]
+    }
+  ]
+}
