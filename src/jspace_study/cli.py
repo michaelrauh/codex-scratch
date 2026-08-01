@@ -29,6 +29,8 @@ def main() -> None:
     validate.add_argument("--model")
     one_step = commands.add_parser("validate-one-step")
     one_step.add_argument("--output", type=Path, default=Path("results/one-step-gpt2"))
+    specificity = commands.add_parser("validate-specificity")
+    specificity.add_argument("--output", type=Path, default=Path("results/specificity-gpt2"))
     run = commands.add_parser("run-benchmark")
     run.add_argument("--output", type=Path, default=Path("results/ladder"))
     agg = commands.add_parser("aggregate")
@@ -50,6 +52,11 @@ def main() -> None:
 
         path = run_one_step_study(config, args.output)
         log.info("one_step_validation_complete", path=str(path))
+    elif args.command == "validate-specificity":
+        from .specificity import run_specificity_study
+
+        path = run_specificity_study(config, args.output)
+        log.info("specificity_validation_complete", path=str(path))
     elif args.command == "run-benchmark":
         from .ladder import run_ladder
 

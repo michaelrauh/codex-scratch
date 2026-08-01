@@ -53,6 +53,23 @@ No values below were recomputed during PR cleanup. The machine-readable source i
 - ordinary-logit-lens top-1/5/10 agreement:
   `0.14696970582008362 / 0.3030303120613098 / 0.4749999940395355`.
 
+## Completed semantic-specificity milestone (2026-08-01)
+
+The frozen GPT-2 124M layers 8--10 were evaluated on the same 60 held-out pairs against a new
+alphabetic non-capital target chosen independently for each prompt to minimize clean log-probability
+mismatch. The control intervention was matched to semantic removed energy separately at every layer.
+The semantic capital's nominated-token gain was `7.409756807486216`; the probability- and
+energy-matched non-capital target's gain was `7.253299196561177`. Their paired difference was only
+`0.15645761092503865` (bootstrap 95% CI `[-0.226415673494339, 0.5676150311032931]`, paired t-test
+`p=0.4459587774750604`). In contrast, within the semantic intervention the nominated capital beat the
+matched off-target token by `10.296925485134125` (CI `[8.874132314622402,
+11.7507125617067]`, `p=2.9848163201297594e-20`).
+
+Thus the intervention is strongly **token-specific**, but this test finds no measured evidence that
+its large nominated-token gain is **capital-semantic-specific**: equally probable alphabetic
+non-capital targets are writable by the same mechanism. See `SPECIFICITY_REPORT.md` and
+`results/specificity-gpt2/summary.json`.
+
 ## Reproduction commands
 
 These commands intentionally are documented but were **not** rerun during binary cleanup:
@@ -109,7 +126,8 @@ uv run jspace-study fit-lens \
 
 ## Next unfinished milestone
 
-Do not start GPT-2 Large or a capability chart yet. Refit GPT-2 Medium on approximately the upstream-
+The GPT-2 124M semantic-specificity milestone is complete. Do not start GPT-2 Large or a capability
+chart yet. Refit GPT-2 Medium on approximately the upstream-
 recommended corpus size (about 100 prompts), validate on at least 100 disjoint positions against all
 three baselines, and require the configured 0.20 top-10 threshold before running the same one-step pilot.
 Only after GPT-2 Medium passes should the third model be fitted and a cross-model pilot considered.
