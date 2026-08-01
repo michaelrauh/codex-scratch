@@ -1,41 +1,12 @@
 seed: 20260801
 cache_dir: artifacts
-results_dir: results
 lens_repository: neuronpedia/jacobian-lens
-primary:
-  capability: mean_normalized_clean_score_above_common_floor
-  task_floor: 0.05
-  normalization: matched_removed_activation_energy
-  selective_effect: semantic_capture_gain_minus_random_capture_gain_minus_unrelated_degradation
 models:
-  - {label: GPT-2 124M, id: openai-community/gpt2, revision: main, cache_name: openai-community--gpt2, lens: gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt, parameters: 124000000}
-  - {label: GPT-2 Medium 355M, id: openai-community/gpt2-medium, revision: main, resolved_revision: 6dcaa7a952f72f9298047fd5137cd6e4f05f41da, cache_name: openai-community--gpt2-medium, lens: fitted/openai-community--gpt2-medium/jacobian_lens.pt, validation: fitted/openai-community--gpt2-medium/validation.json, parameters: 355000000}
-  - {label: GPT-2 Large 774M, id: openai-community/gpt2-large, revision: main, cache_name: openai-community--gpt2-large, lens: null, parameters: 774000000}
-  - {label: GPT-2 XL 1.5B, id: openai-community/gpt2-xl, revision: main, cache_name: openai-community--gpt2-xl, lens: null, parameters: 1500000000}
-  - {label: Qwen2.5 0.5B, id: Qwen/Qwen2.5-0.5B, revision: main, cache_name: Qwen--Qwen2.5-0.5B, lens: null, parameters: 500000000}
-  - {label: Qwen2.5 1.5B, id: Qwen/Qwen2.5-1.5B, revision: main, cache_name: Qwen--Qwen2.5-1.5B, lens: null, parameters: 1500000000}
-  - {label: Qwen2.5 3B, id: Qwen/Qwen2.5-3B, revision: main, cache_name: Qwen--Qwen2.5-3B, lens: null, parameters: 3000000000}
-search:
-  tuning_layers: [[3, 5], [5, 8], [7, 10]]
-  strengths: [0.5, 1.0, 1.5]
-  normalizations: [fixed_rank, proportional_rank, matched_removed_activation_energy, matched_kl]
-  fixed_rank: 2
-  proportional_rank_fraction: 0.00390625
+  - {label: GPT-2 124M, id: openai-community/gpt2, revision: main, parameters: 124000000, cache_name: openai-community--gpt2, lens: gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt}
+  - {label: GPT-2 Medium, id: openai-community/gpt2-medium, revision: main, parameters: 355000000}
+  - {label: GPT-2 Large, id: openai-community/gpt2-large, revision: main, parameters: 774000000}
+benchmark:
+  pairs: data/benchmark.yaml
+  bootstraps: 2000
 data:
-  tuning: data/country_tuning.yaml
-  evaluation: data/country_eval.yaml
-lens_fit:
-  dataset_id: Salesforce/wikitext
-  dataset_revision: b08601e04326c79dfdd32d625aee71d232d685c3
-  dataset_path: artifacts/datasets/Salesforce--wikitext/wikitext-103-raw-v1/validation-00000-of-00001.parquet
-  fit_prompts: 4
-  validation_prompts: 4
-  prompt_tokens: 48
-  source_layers: [5, 6, 7, 8]
-  dim_batch: 256
-  max_seq_len: 32
-  skip_first: 16
-  minimum_mean_jacobian_top10: 0.20
-specificity:
-  selected_layers: [8, 9, 10]
-  evaluation_pairs: 60
+  evaluation: data/benchmark.yaml
