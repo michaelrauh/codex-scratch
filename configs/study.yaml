@@ -1,0 +1,24 @@
+seed: 20260801
+cache_dir: artifacts
+results_dir: results
+lens_repository: neuronpedia/jacobian-lens
+primary:
+  capability: mean_normalized_clean_score_above_common_floor
+  task_floor: 0.05
+  normalization: matched_removed_activation_energy
+  selective_effect: semantic_capture_gain_minus_random_capture_gain_minus_unrelated_degradation
+models:
+  - {label: GPT-2 124M, id: openai-community/gpt2, revision: main, cache_name: openai-community--gpt2, lens: gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt, parameters: 124000000}
+  - {label: GPT-2 Medium 355M, id: gpt2-medium, revision: main, lens: null, parameters: 355000000}
+  - {label: Qwen3 0.6B, id: Qwen/Qwen3-0.6B, revision: main, lens: null, parameters: 600000000}
+  - {label: Qwen3 1.7B, id: Qwen/Qwen3-1.7B, revision: main, lens: null, parameters: 1700000000}
+  # Add Qwen/Qwen3-4B without code changes once memory and a fitted lens are available.
+search:
+  tuning_layers: [[3, 5], [5, 8], [7, 10]]
+  strengths: [0.5, 1.0, 1.5]
+  normalizations: [fixed_rank, proportional_rank, matched_removed_activation_energy, matched_kl]
+  fixed_rank: 2
+  proportional_rank_fraction: 0.00390625
+data:
+  tuning: data/country_tuning.yaml
+  evaluation: data/country_eval.yaml

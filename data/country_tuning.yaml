@@ -1,0 +1,4 @@
+- {source: France, target: China, relation: capital, prompt: "The capital of France is", original: Paris, desired: Beijing}
+- {source: Italy, target: Japan, relation: language, prompt: "The main language of Italy is", original: Italian, desired: Japanese}
+- {source: Germany, target: Brazil, relation: continent, prompt: "Germany is in", original: Europe, desired: "South America"}
+

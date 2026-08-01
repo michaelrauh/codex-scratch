@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jspace-capability"
+version = "0.1.0"
+description = "Preregistered study of capability and causal J-space responsiveness"
+requires-python = ">=3.12"
+dependencies = [
+  "huggingface-hub>=0.34", "matplotlib>=3.9", "numpy>=2.0", "pandas>=2.2",
+  "pyarrow>=17", "pyyaml>=6", "scipy>=1.14", "structlog>=24",
+  "torch>=2.4", "transformers>=5.5",
+  "jlens @ git+https://github.com/anthropics/jacobian-lens.git@581d398613e5602a5af361e1c34d3a92ea82ba8e",
+]
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11", "pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+jspace-study = "jspace_study.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jspace_study"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+markers = ["integration: downloads and runs a real model"]
+
+[tool.mypy]
+ignore_missing_imports = true
